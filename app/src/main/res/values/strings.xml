@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">EjercicioFer</string>
+    <string name="tbtext">HAZ CLICK!!</string>
+    <string name="switchText">Prueba el Switch</string>
+    <string name="rb1text">Opción 1</string>
+    <string name="rb2text">Opción 2</string>
+    <string name="edhint">Tu nombre aquí</string>
 </resources>

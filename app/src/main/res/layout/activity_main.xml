@@ -15,8 +15,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:textSize="25sp"
-        tools:text="My Colors" />
+        android:textSize="40sp"
+        android:text="@string/mycolors"
+        />
 
     <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/switch1"

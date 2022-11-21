@@ -1,6 +1,7 @@
 package com.example.ejerciciofer
 
 import androidx.appcompat.app.AppCompatActivity
+import com.example.ejerciciofer.databinding.ActivityMainBinding
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -8,23 +9,22 @@ import android.widget.Toast
 import androidx.appcompat.widget.SwitchCompat
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        val btn1 = findViewById<Button>(R.id.button1)
-        val switch1 = findViewById<SwitchCompat>(R.id.switch1)
-        val txedit = findViewById<EditText>(R.id.editText)
-
-        switch1.setOnClickListener {
-            btn1.isEnabled = switch1.isChecked == true
+        binding.switch1.setOnClickListener {
+            binding.button1.isEnabled = binding.switch1.isChecked == true
 
         }
 
-        btn1.setOnClickListener {
-            if(txedit.text.isNotEmpty())
+        binding.button1.setOnClickListener {
+            if(binding.editText.text.isNotEmpty())
             {
-                Toast.makeText(this, "Hola ${txedit.text}!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Hola ${binding.editText.text}!", Toast.LENGTH_SHORT).show()
             }else Toast.makeText(this, "Escribe tu nombre", Toast.LENGTH_SHORT).show()
         }
 
